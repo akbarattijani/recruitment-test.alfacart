@@ -26,6 +26,8 @@ public class Employee {
 
     private float salary;
 
+    private String roleName;
+
     public Integer getId() {
         return id;
     }
@@ -72,5 +74,13 @@ public class Employee {
 
     public void setSalary(float salary) {
         this.salary = salary;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 }

@@ -56,6 +56,8 @@ public class EmployeeController {
                 return "Role Id is mandatory";
             } else if (!jsonBody.has("salary")) {
                 return "Salary is mandatory";
+            } else if (!jsonBody.has("role_name")) {
+                return "Role name is mandatory";
             }
 
             Employee employee = new Employee();
@@ -69,6 +71,7 @@ public class EmployeeController {
 
             employee.setRole(jsonBody.getInt("role_id"));
             employee.setSalary(jsonBody.getInt("salary"));
+            employee.setRoleName(jsonBody.getString("role_name"));
 
             employeeRepository.save(employee);
             return "Success -> Added";
